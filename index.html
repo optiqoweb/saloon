@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumière Salon & Spa</title>
+<meta name="description" content="Lumière Salon & Spa – hair, skin, makeup and bridal services.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&family=Noto+Sans+Bengali:wght@300;400;500&family=Noto+Serif+Bengali:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7f3;--surface:#fff;--ink:#2a2226;--muted:#7a6d72;--accent:#b4637a;--accent2:#d9a86c;--line:#eadfd8;--hero:#f3e3e0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#171214;--surface:#211a1d;--ink:#f3eaec;--muted:#a99a9f;--accent:#e08aa1;--accent2:#e0b97e;--line:#33292d;--hero:#2a1d22}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#171214;--surface:#211a1d;--ink:#f3eaec;--muted:#a99a9f;--accent:#e08aa1;--accent2:#e0b97e;--line:#33292d;--hero:#2a1d22}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Jost','Noto Sans Bengali',system-ui,sans-serif;font-weight:300;line-height:1.7;transition:background .3s,color .3s}
+h1,h2,h3,.logo,.quote,.stats b{font-family:'Cormorant Garamond','Noto Serif Bengali',Georgia,serif}
+h1,h2,h3{font-weight:600;line-height:1.25;margin:0}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-size:24px;font-weight:600}.logo span{color:var(--accent)}
+nav .links{display:flex;gap:22px;font-size:15px;font-weight:400}
+.ctl{display:flex;align-items:center;gap:8px}
+.ib{background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;min-width:44px;height:44px;font:inherit;font-size:15px;font-weight:500;cursor:pointer}
+.menu{display:none;font-size:20px}
+.btn{display:inline-block;min-height:44px;background:var(--accent);color:#fff;padding:11px 26px;border-radius:40px;font-weight:400;border:0;font:inherit;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.hero{background:var(--hero);padding:80px 0}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.eyebrow{color:var(--accent);letter-spacing:2px;text-transform:uppercase;font-size:13px;font-weight:500}
+.hero h1{font-size:clamp(36px,6vw,62px);margin:14px 0 18px}
+.hero p{color:var(--muted);max-width:480px;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.art{aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:linear-gradient(160deg,var(--accent2),var(--accent));display:grid;place-items:center;font-size:96px}
+section{padding:70px 0}
+.head{text-align:center;margin-bottom:36px}
+.head h2{font-size:clamp(28px,4vw,40px);margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:24px;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.row b{font-weight:500;color:var(--accent);white-space:nowrap}
+.about{background:var(--surface);border-block:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;margin-top:30px}
+.stats b{display:block;font-size:40px;color:var(--accent)}
+.quote{font-size:20px;font-weight:500}
+.quote small{display:block;font-family:'Jost','Noto Sans Bengali',sans-serif;font-size:13px;color:var(--muted);margin-top:10px}
+form{display:grid;gap:12px;max-width:520px;margin:0 auto}
+input,select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-size:16px;min-height:46px}
+#ok{display:none;text-align:center;color:var(--accent);font-weight:500}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+#top2{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s;z-index:6}
+#top2.show{opacity:1;pointer-events:auto;transform:none}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+nav .links a.act{color:var(--accent);font-weight:500}
+@media(max-width:900px){.hero{padding:60px 0}}
+@media(max-width:720px){
+.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.cta{justify-content:center}
+.art{max-width:240px;margin:auto;order:-1;font-size:72px}
+.hero{padding:44px 0}section{padding:48px 0}
+.menu{display:block}.nbtn{display:none}.ctl{margin-left:auto}
+nav .links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 20px 12px}
+nav.open .links{display:flex}
+nav .links a{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}
+nav .links a:last-child{border-bottom:0}}
+@media(max-width:480px){.wrap{padding:0 16px}.stats b{font-size:32px}.cta .btn{width:100%;text-align:center}.card{padding:20px}.logo{font-size:21px}}
+@media(min-width:1400px){html{font-size:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}#top2{transition:none}}
+</style>
+</head>
+<body data-page="index.html">
+<nav id="nv"><div class="wrap"><a href="index.html" class="logo">Lumi&egrave;re<span>.</span></a>
+<div class="links"><a href="index.html" data-i="n0">হোম</a><a href="services.html" data-i="n1">সেবা</a><a href="about.html" data-i="n2">পরিচিতি</a><a href="book.html" data-i="n4">বুকিং</a></div>
+<div class="ctl"><button class="ib" id="lang" aria-label="Language">EN</button><button class="ib" id="theme" aria-label="Theme">🌙</button><a href="book.html" class="btn nbtn" data-i="nb">বুক করুন</a><button class="ib menu" id="m" aria-label="Menu" aria-expanded="false">☰</button></div></div></nav>
+<header class="hero"><div class="wrap">
+<div><div class="eyebrow" data-i="h0">চুল · ত্বক · ব্রাইডাল</div>
+<h1 data-i="h1">যেখানে সৌন্দর্য হয় সহজ ও স্বাভাবিক</h1>
+<p data-i="hp">চুল, ত্বক ও মেকআপের জন্য একটি শান্ত, আধুনিক সেলুন। যেমন আছেন তেমনই আসুন, নিজের সেরা রূপে ফিরে যান।</p>
+<div class="cta"><a href="book.html" class="btn" data-i="hb1">অ্যাপয়েন্টমেন্ট নিন</a><a href="services.html" class="btn ghost" data-i="hb2">সেবাসমূহ দেখুন</a></div></div>
+<div class="art" aria-hidden="true">✂️</div>
+</div></header>
+<section ><div class="wrap">
+<div class="head"><div class="eyebrow" data-i="r0">ক্লায়েন্টদের কথা</div><h2 data-i="r1">যাঁরা আমাদের ভালোবাসেন</h2></div>
+<div class="grid">
+<div class="card quote"><span data-i="q1">“এত বছরের মধ্যে সেরা হেয়ারকাট। বন্ধুসুলভ টিম আর খুব আরামদায়ক পরিবেশ।”</span><small data-i="u1">নুসরাত এ.</small></div>
+<div class="card quote"><span data-i="q2">“আমার বিয়ের দিনের লুক ছিল নিখুঁত। সবাই জিজ্ঞেস করেছে মেকআপ কে করেছে!”</span><small data-i="u2">তাসনিম আর.</small></div>
+<div class="card quote"><span data-i="q3">“পরিচ্ছন্ন, পেশাদার, প্রতিটি টাকা সার্থক। আমার ত্বক আগে কখনো এত ভালো দেখায়নি।”</span><small data-i="u3">ফারজানা এইচ.</small></div>
+</div></div></section>
+<footer><div class="wrap"><span data-i="ft">লুমিয়ের সেলুন ও স্পা · প্রতিদিন সকাল ১০টা – রাত ৯টা · ডেমো ডিজাইন: Optiqo Web</span></div></footer>
+<button id="top2" aria-label="Back to top">↑</button>
+<script>
+var EN={n0:"Home",n1:"Services",n2:"About",n3:"Reviews",n4:"Book",nb:"Book now",h0:"Hair · Skin · Bridal",h1:"Where beauty feels effortless",hp:"A calm, modern salon for hair, skin and makeup. Walk in as you are, leave feeling like the best version of yourself.",hb1:"Book appointment",hb2:"View services",s0:"What we do",s1:"Our services",c1:"Hair",a1:"Haircut & styling",a2:"Hair colour",a3:"Keratin treatment",c2:"Skin",b1:"Classic facial",b2:"Hydra glow facial",b3:"Clean-up",c3:"Makeup",d1:"Party makeup",d2:"Engagement look",d3:"Bridal package",c4:"Nails & Spa",e1:"Manicure",e2:"Pedicure",e3:"Relaxing massage",o0:"Our story",o1:"Care, craft and a little calm",o2:"Our stylists are trained in the latest techniques and use trusted, skin-friendly products. Every visit starts with a conversation, because great results begin with listening.",t1:"Years",t2:"Happy clients",t3:"Expert stylists",r0:"Kind words",r1:"Loved by our clients",q1:"“Best haircut I’ve had in years. Friendly team and a really relaxing space.”",u1:"Nusrat A.",q2:"“They made my wedding day look flawless. Everyone asked who did my makeup!”",u2:"Tasnim R.",q3:"“Clean, professional and worth every taka. My skin has never looked better.”",u3:"Farzana H.",k0:"Reserve your spot",k1:"Book an appointment",p1:"Your name",p2:"Phone number",g1:"Hair",g2:"Skin",g3:"Makeup",g4:"Nails & Spa",k2:"Request booking",k3:"Thank you! We’ll call you shortly to confirm.",ft:"Lumière Salon & Spa · Open daily 10 AM – 9 PM · Demo design by Optiqo Web"};
+var els=document.querySelectorAll('[data-i],[data-ph]');
+els.forEach(function(e){if(e.dataset.i)e._t=e.textContent;if(e.dataset.ph)e._p=e.getAttribute('placeholder')});
+var lb=document.getElementById('lang');
+function setLang(l){document.documentElement.lang=l;
+els.forEach(function(e){if(e.dataset.i)e.textContent=l==='en'?EN[e.dataset.i]:e._t;if(e.dataset.ph)e.setAttribute('placeholder',l==='en'?EN[e.dataset.ph]:e._p)});
+lb.textContent=l==='en'?'বাং':'EN';try{localStorage.setItem('lang',l)}catch(e){}}
+lb.addEventListener('click',function(){setLang(document.documentElement.lang==='en'?'bn':'en')});
+try{if(localStorage.getItem('lang')==='en')setLang('en')}catch(e){}
+
+var th=document.getElementById('theme'),rt=document.documentElement;
+function isDark(){var t=rt.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+function icon(){th.textContent=isDark()?'☀️':'🌙'}
+th.addEventListener('click',function(){var n=isDark()?'light':'dark';rt.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}icon()});
+icon();
+
+var nv=document.getElementById('nv'),mb=document.getElementById('m');
+function closeM(){nv.classList.remove('open');mb.setAttribute('aria-expanded',false);mb.textContent='☰'}
+mb.addEventListener('click',function(){var o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'✕':'☰'});
+nv.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',closeM)});
+
+var tp=document.getElementById('top2');
+window.addEventListener('scroll',function(){tp.classList.toggle('show',window.scrollY>500)},{passive:true});
+tp.addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+
+(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.card,.head,.hero .wrap>*,.stats>div').forEach(function(el){el.classList.add('rv');el.style.transitionDelay=(Array.prototype.indexOf.call(el.parentNode.children,el)%4)*90+'ms';io.observe(el)})})();
+
+nv.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===document.body.dataset.page)a.classList.add('act')});
+var fm=document.getElementById('f');if(fm)fm.addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block';this.reset()});
+</script>
+</body>
+</html>
