@@ -70,6 +70,12 @@ nav .links a:last-child{border-bottom:0}}
 @media(max-width:480px){.wrap{padding:0 16px}.stats b{font-size:32px}.cta .btn{width:100%;text-align:center}.card{padding:20px}.logo{font-size:21px}}
 @media(min-width:1400px){html{font-size:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}#top2{transition:none}}
+.credit{display:inline-block;margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:14px}
+.credit a{font-weight:500;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.credit a::after{content:" \2197";display:inline-block;text-decoration:none}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 20px}
+.credit{margin-top:0}
+@media(max-width:640px){footer .wrap{flex-direction:column;justify-content:center;text-align:center}}
 </style>
 </head>
 <body data-page="index.html">
@@ -90,10 +96,10 @@ nav .links a:last-child{border-bottom:0}}
 <div class="card quote"><span data-i="q2">“আমার বিয়ের দিনের লুক ছিল নিখুঁত। সবাই জিজ্ঞেস করেছে মেকআপ কে করেছে!”</span><small data-i="u2">তাসনিম আর.</small></div>
 <div class="card quote"><span data-i="q3">“পরিচ্ছন্ন, পেশাদার, প্রতিটি টাকা সার্থক। আমার ত্বক আগে কখনো এত ভালো দেখায়নি।”</span><small data-i="u3">ফারজানা এইচ.</small></div>
 </div></div></section>
-<footer><div class="wrap"><span data-i="ft">লুমিয়ের সেলুন ও স্পা · প্রতিদিন সকাল ১০টা – রাত ৯টা · ডেমো ডিজাইন: Optiqo Web</span></div></footer>
+<footer><div class="wrap"><span data-i="ft">লুমিয়ের সেলুন ও স্পা · প্রতিদিন সকাল ১০টা – রাত ৯টা</span><span class="credit">Designed &amp; Maintained by <a href="https://optiqoweb.github.io/optiqoweb/" target="_blank" rel="noopener">Optiqo Web</a></span></div></footer>
 <button id="top2" aria-label="Back to top">↑</button>
 <script>
-var EN={n0:"Home",n1:"Services",n2:"About",n3:"Reviews",n4:"Book",nb:"Book now",h0:"Hair · Skin · Bridal",h1:"Where beauty feels effortless",hp:"A calm, modern salon for hair, skin and makeup. Walk in as you are, leave feeling like the best version of yourself.",hb1:"Book appointment",hb2:"View services",s0:"What we do",s1:"Our services",c1:"Hair",a1:"Haircut & styling",a2:"Hair colour",a3:"Keratin treatment",c2:"Skin",b1:"Classic facial",b2:"Hydra glow facial",b3:"Clean-up",c3:"Makeup",d1:"Party makeup",d2:"Engagement look",d3:"Bridal package",c4:"Nails & Spa",e1:"Manicure",e2:"Pedicure",e3:"Relaxing massage",o0:"Our story",o1:"Care, craft and a little calm",o2:"Our stylists are trained in the latest techniques and use trusted, skin-friendly products. Every visit starts with a conversation, because great results begin with listening.",t1:"Years",t2:"Happy clients",t3:"Expert stylists",r0:"Kind words",r1:"Loved by our clients",q1:"“Best haircut I’ve had in years. Friendly team and a really relaxing space.”",u1:"Nusrat A.",q2:"“They made my wedding day look flawless. Everyone asked who did my makeup!”",u2:"Tasnim R.",q3:"“Clean, professional and worth every taka. My skin has never looked better.”",u3:"Farzana H.",k0:"Reserve your spot",k1:"Book an appointment",p1:"Your name",p2:"Phone number",g1:"Hair",g2:"Skin",g3:"Makeup",g4:"Nails & Spa",k2:"Request booking",k3:"Thank you! We’ll call you shortly to confirm.",ft:"Lumière Salon & Spa · Open daily 10 AM – 9 PM · Demo design by Optiqo Web"};
+var EN={n0:"Home",n1:"Services",n2:"About",n3:"Reviews",n4:"Book",nb:"Book now",h0:"Hair · Skin · Bridal",h1:"Where beauty feels effortless",hp:"A calm, modern salon for hair, skin and makeup. Walk in as you are, leave feeling like the best version of yourself.",hb1:"Book appointment",hb2:"View services",s0:"What we do",s1:"Our services",c1:"Hair",a1:"Haircut & styling",a2:"Hair colour",a3:"Keratin treatment",c2:"Skin",b1:"Classic facial",b2:"Hydra glow facial",b3:"Clean-up",c3:"Makeup",d1:"Party makeup",d2:"Engagement look",d3:"Bridal package",c4:"Nails & Spa",e1:"Manicure",e2:"Pedicure",e3:"Relaxing massage",o0:"Our story",o1:"Care, craft and a little calm",o2:"Our stylists are trained in the latest techniques and use trusted, skin-friendly products. Every visit starts with a conversation, because great results begin with listening.",t1:"Years",t2:"Happy clients",t3:"Expert stylists",r0:"Kind words",r1:"Loved by our clients",q1:"“Best haircut I’ve had in years. Friendly team and a really relaxing space.”",u1:"Nusrat A.",q2:"“They made my wedding day look flawless. Everyone asked who did my makeup!”",u2:"Tasnim R.",q3:"“Clean, professional and worth every taka. My skin has never looked better.”",u3:"Farzana H.",k0:"Reserve your spot",k1:"Book an appointment",p1:"Your name",p2:"Phone number",g1:"Hair",g2:"Skin",g3:"Makeup",g4:"Nails & Spa",k2:"Request booking",k3:"Thank you! We’ll call you shortly to confirm.",ft:"Lumière Salon & Spa · Open daily 10 AM – 9 PM"};
 var els=document.querySelectorAll('[data-i],[data-ph]');
 els.forEach(function(e){if(e.dataset.i)e._t=e.textContent;if(e.dataset.ph)e._p=e.getAttribute('placeholder')});
 var lb=document.getElementById('lang');

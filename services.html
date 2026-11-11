@@ -10,7 +10,6 @@
 <style>
 :root{--bg:#fbf7f3;--surface:#fff;--ink:#2a2226;--muted:#7a6d72;--accent:#b4637a;--accent2:#d9a86c;--line:#eadfd8;--hero:#f3e3e0;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#171214;--surface:#211a1d;--ink:#f3eaec;--muted:#a99a9f;--accent:#e08aa1;--accent2:#e0b97e;--line:#33292d;--hero:#2a1d22}}
 :root[data-theme="dark"]{color-scheme:dark;--bg:#171214;--surface:#211a1d;--ink:#f3eaec;--muted:#a99a9f;--accent:#e08aa1;--accent2:#e0b97e;--line:#33292d;--hero:#2a1d22}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
@@ -70,12 +69,30 @@ nav .links a:last-child{border-bottom:0}}
 @media(max-width:480px){.wrap{padding:0 16px}.stats b{font-size:32px}.cta .btn{width:100%;text-align:center}.card{padding:20px}.logo{font-size:21px}}
 @media(min-width:1400px){html{font-size:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}#top2{transition:none}}
+.seg,.tgl{position:relative;display:inline-flex;align-items:center;height:44px;padding:4px;border:1px solid var(--line);border-radius:40px;background:var(--surface);cursor:pointer;font:inherit;font-size:13px;font-weight:500;-webkit-tap-highlight-color:transparent}
+.seg:focus-visible,.tgl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.thumb{position:absolute;top:4px;left:4px;height:34px;border-radius:30px;background:var(--ink);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.seg .thumb{width:38px}.tgl .thumb{width:34px}
+.seg .o{position:relative;z-index:1;width:38px;text-align:center;line-height:34px;color:var(--muted);transition:color .25s}
+:root:not([lang="en"]) .seg .o-bn,:root[lang="en"] .seg .o-en{color:var(--bg)}
+:root[lang="en"] .seg .thumb{transform:translateX(38px)}
+.tgl svg{position:relative;z-index:1;width:34px;height:34px;padding:8px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:color .25s}
+.tgl .sun{color:var(--bg)}.tgl .moon{color:var(--muted)}
+.tgl[aria-pressed="true"] .sun{color:var(--muted)}.tgl[aria-pressed="true"] .moon{color:var(--bg)}
+.tgl[aria-pressed="true"] .thumb{transform:translateX(34px)}
+@media(prefers-reduced-motion:reduce){.thumb,.seg .o,.tgl svg{transition:none}}
+.credit{display:inline-block;margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:14px}
+.credit a{font-weight:500;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.credit a::after{content:" \2197";display:inline-block;text-decoration:none}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 20px}
+.credit{margin-top:0}
+@media(max-width:640px){footer .wrap{flex-direction:column;justify-content:center;text-align:center}}
 </style>
 </head>
 <body data-page="services.html">
 <nav id="nv"><div class="wrap"><a href="index.html" class="logo">Lumi&egrave;re<span>.</span></a>
 <div class="links"><a href="index.html" data-i="n0">হোম</a><a href="services.html" data-i="n1">সেবা</a><a href="about.html" data-i="n2">পরিচিতি</a><a href="book.html" data-i="n4">বুকিং</a></div>
-<div class="ctl"><button class="ib" id="lang" aria-label="Language">EN</button><button class="ib" id="theme" aria-label="Theme">🌙</button><a href="book.html" class="btn nbtn" data-i="nb">বুক করুন</a><button class="ib menu" id="m" aria-label="Menu" aria-expanded="false">☰</button></div></div></nav>
+<div class="ctl"><button class="seg" id="lang" type="button" aria-label="Switch to English" title="Language"><span class="thumb"></span><span class="o o-bn">বাং</span><span class="o o-en">EN</span></button><button class="tgl" id="theme" type="button" aria-pressed="false" aria-label="Dark mode" title="Theme"><span class="thumb"></span><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button><a href="book.html" class="btn nbtn" data-i="nb">বুক করুন</a><button class="ib menu" id="m" aria-label="Menu" aria-expanded="false">☰</button></div></div></nav>
 <section ><div class="wrap">
 <div class="head"><div class="eyebrow" data-i="s0">আমাদের সেবা</div><h2 data-i="s1">সেবাসমূহ</h2></div>
 <div class="grid">
@@ -88,22 +105,22 @@ nav .links a:last-child{border-bottom:0}}
 <div class="card"><h3 data-i="c4">নখ ও স্পা</h3>
 <div class="row"><span data-i="e1">ম্যানিকিউর</span><b>৳ 700</b></div><div class="row"><span data-i="e2">পেডিকিউর</span><b>৳ 900</b></div><div class="row"><span data-i="e3">রিল্যাক্সিং ম্যাসাজ</span><b>৳ 2,500</b></div></div>
 </div></div></section>
-<footer><div class="wrap"><span data-i="ft">লুমিয়ের সেলুন ও স্পা · প্রতিদিন সকাল ১০টা – রাত ৯টা · ডেমো ডিজাইন: Optiqo Web</span></div></footer>
+<footer><div class="wrap"><span data-i="ft">লুমিয়ের সেলুন ও স্পা · প্রতিদিন সকাল ১০টা – রাত ৯টা</span><span class="credit">Designed &amp; Maintained by <a href="https://optiqoweb.github.io/optiqoweb/" target="_blank" rel="noopener">Optiqo Web</a></span></div></footer>
 <button id="top2" aria-label="Back to top">↑</button>
 <script>
-var EN={n0:"Home",n1:"Services",n2:"About",n3:"Reviews",n4:"Book",nb:"Book now",h0:"Hair · Skin · Bridal",h1:"Where beauty feels effortless",hp:"A calm, modern salon for hair, skin and makeup. Walk in as you are, leave feeling like the best version of yourself.",hb1:"Book appointment",hb2:"View services",s0:"What we do",s1:"Our services",c1:"Hair",a1:"Haircut & styling",a2:"Hair colour",a3:"Keratin treatment",c2:"Skin",b1:"Classic facial",b2:"Hydra glow facial",b3:"Clean-up",c3:"Makeup",d1:"Party makeup",d2:"Engagement look",d3:"Bridal package",c4:"Nails & Spa",e1:"Manicure",e2:"Pedicure",e3:"Relaxing massage",o0:"Our story",o1:"Care, craft and a little calm",o2:"Our stylists are trained in the latest techniques and use trusted, skin-friendly products. Every visit starts with a conversation, because great results begin with listening.",t1:"Years",t2:"Happy clients",t3:"Expert stylists",r0:"Kind words",r1:"Loved by our clients",q1:"“Best haircut I’ve had in years. Friendly team and a really relaxing space.”",u1:"Nusrat A.",q2:"“They made my wedding day look flawless. Everyone asked who did my makeup!”",u2:"Tasnim R.",q3:"“Clean, professional and worth every taka. My skin has never looked better.”",u3:"Farzana H.",k0:"Reserve your spot",k1:"Book an appointment",p1:"Your name",p2:"Phone number",g1:"Hair",g2:"Skin",g3:"Makeup",g4:"Nails & Spa",k2:"Request booking",k3:"Thank you! We’ll call you shortly to confirm.",ft:"Lumière Salon & Spa · Open daily 10 AM – 9 PM · Demo design by Optiqo Web"};
+var EN={n0:"Home",n1:"Services",n2:"About",n3:"Reviews",n4:"Book",nb:"Book now",h0:"Hair · Skin · Bridal",h1:"Where beauty feels effortless",hp:"A calm, modern salon for hair, skin and makeup. Walk in as you are, leave feeling like the best version of yourself.",hb1:"Book appointment",hb2:"View services",s0:"What we do",s1:"Our services",c1:"Hair",a1:"Haircut & styling",a2:"Hair colour",a3:"Keratin treatment",c2:"Skin",b1:"Classic facial",b2:"Hydra glow facial",b3:"Clean-up",c3:"Makeup",d1:"Party makeup",d2:"Engagement look",d3:"Bridal package",c4:"Nails & Spa",e1:"Manicure",e2:"Pedicure",e3:"Relaxing massage",o0:"Our story",o1:"Care, craft and a little calm",o2:"Our stylists are trained in the latest techniques and use trusted, skin-friendly products. Every visit starts with a conversation, because great results begin with listening.",t1:"Years",t2:"Happy clients",t3:"Expert stylists",r0:"Kind words",r1:"Loved by our clients",q1:"“Best haircut I’ve had in years. Friendly team and a really relaxing space.”",u1:"Nusrat A.",q2:"“They made my wedding day look flawless. Everyone asked who did my makeup!”",u2:"Tasnim R.",q3:"“Clean, professional and worth every taka. My skin has never looked better.”",u3:"Farzana H.",k0:"Reserve your spot",k1:"Book an appointment",p1:"Your name",p2:"Phone number",g1:"Hair",g2:"Skin",g3:"Makeup",g4:"Nails & Spa",k2:"Request booking",k3:"Thank you! We’ll call you shortly to confirm.",ft:"Lumière Salon & Spa · Open daily 10 AM – 9 PM"};
 var els=document.querySelectorAll('[data-i],[data-ph]');
 els.forEach(function(e){if(e.dataset.i)e._t=e.textContent;if(e.dataset.ph)e._p=e.getAttribute('placeholder')});
 var lb=document.getElementById('lang');
 function setLang(l){document.documentElement.lang=l;
 els.forEach(function(e){if(e.dataset.i)e.textContent=l==='en'?EN[e.dataset.i]:e._t;if(e.dataset.ph)e.setAttribute('placeholder',l==='en'?EN[e.dataset.ph]:e._p)});
-lb.textContent=l==='en'?'বাং':'EN';try{localStorage.setItem('lang',l)}catch(e){}}
+lb.setAttribute('aria-label',l==='en'?'বাংলায় দেখুন':'Switch to English');try{localStorage.setItem('lang',l)}catch(e){}}
 lb.addEventListener('click',function(){setLang(document.documentElement.lang==='en'?'bn':'en')});
 try{if(localStorage.getItem('lang')==='en')setLang('en')}catch(e){}
 
 var th=document.getElementById('theme'),rt=document.documentElement;
-function isDark(){var t=rt.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
-function icon(){th.textContent=isDark()?'☀️':'🌙'}
+function isDark(){return rt.dataset.theme==='dark'}
+function icon(){var d=isDark();th.setAttribute('aria-pressed',d);th.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}
 th.addEventListener('click',function(){var n=isDark()?'light':'dark';rt.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}icon()});
 icon();
 
