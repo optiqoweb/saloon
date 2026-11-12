@@ -1,76 +1,182 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Services – Lumière Salon & Spa</title>
-<meta name="description" content="Lumière Salon & Spa – hair, skin, makeup and bridal services.">
+<meta name="description" content="Hair, skin, makeup and nail & spa services at Lumière Salon & Spa, with starting prices.">
+<meta name="theme-color" content="#8a3a5c">
+<meta property="og:title" content="Services – Lumière Salon & Spa">
+<meta property="og:description" content="Hair, skin, makeup and nail & spa services at Lumière Salon & Spa, with starting prices.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238a3a5c'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='Georgia,serif'%3EL%3C/text%3E%3C/svg%3E">
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500&family=Hind+Siliguri:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbf7f3;--surface:#fff;--ink:#2a2226;--muted:#7a6d72;--accent:#b4637a;--accent2:#d9a86c;--line:#eadfd8;--hero:#f3e3e0;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#171214;--surface:#211a1d;--ink:#f3eaec;--muted:#a99a9f;--accent:#e08aa1;--accent2:#e0b97e;--line:#33292d;--hero:#2a1d22}
+:root{--bg:#fbf7f4;--surface:#fff;--ink:#261a26;--muted:#695966;--accent:#8a3a5c;--on:#fff;--gold:#b8924f;--line:#e8dad5;--soft:#f5e9e5;--err:#b3261e;color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#140e13;--surface:#1f161e;--ink:#f5ebee;--muted:#bdaab5;--accent:#f0a3bd;--on:#2a1020;--gold:#e3bf86;--line:#382a35;--soft:#1a1219;--err:#ff9a93}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:'Jost','Hind Siliguri',system-ui,sans-serif;font-weight:300;line-height:1.7;transition:background .3s,color .3s}
-h1,h2,h3,.logo,.quote,.stats b{font-family:'Cormorant Garamond','Hind Siliguri',Georgia,serif}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.75 'Jost','Hind Siliguri',system-ui,sans-serif;transition:background .3s,color .3s}
+h1,h2,h3,.logo,.quote,.num{font-family:'Cormorant Garamond','Hind Siliguri',Georgia,serif}
 h1,h2,h3{font-weight:600;line-height:1.25;margin:0}
+h1{font-size:clamp(2.4rem,5.5vw,4.1rem)}
+h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+h3{font-size:1.35rem}
+h4{font:500 1rem/1.4 'Jost','Hind Siliguri',sans-serif;margin:0 0 12px}
+p{margin:0}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
-.logo{font-size:24px;font-weight:600}.logo span{color:var(--accent)}
-nav .links{display:flex;gap:22px;font-size:15px;font-weight:400}
-.ctl{display:flex;align-items:center;gap:8px}
-.ib{background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;min-width:44px;height:44px;font:inherit;font-size:15px;font-weight:500;cursor:pointer}
-.menu{display:none;font-size:20px}
-.btn{display:inline-block;min-height:44px;background:var(--accent);color:#fff;padding:11px 26px;border-radius:40px;font-weight:400;border:0;font:inherit;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.hero{background:var(--hero);padding:80px 0}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.eyebrow{color:var(--accent);letter-spacing:2px;text-transform:uppercase;font-size:13px;font-weight:500}
-.hero h1{font-size:clamp(36px,6vw,62px);margin:14px 0 18px}
-.hero p{color:var(--muted);max-width:480px;margin:0 0 26px}
+img,svg{max-width:100%}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:20;background:var(--accent);color:var(--on);padding:10px 14px;border-radius:8px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+.muted{color:var(--muted)}
+
+/* top bar + nav */
+.topbar{background:var(--soft);border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;min-height:36px;align-items:center}
+.topbar a{color:var(--ink);font-weight:500}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{font-size:26px;font-weight:600;letter-spacing:.2px}.logo span{color:var(--accent)}
+nav .links{display:flex;gap:30px;font-size:15px;font-weight:500}
+nav .links a{padding:6px 0;border-bottom:2px solid transparent;color:var(--muted);transition:color .2s,border-color .2s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.act{color:var(--ink);border-color:var(--accent)}
+.ctl{display:flex;align-items:center;gap:10px}
+.ib{background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;min-width:44px;height:44px;cursor:pointer}
+.menu{display:none}
+.menu svg{width:22px;height:22px;display:block;margin:auto;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;background:var(--accent);color:var(--on);padding:10px 26px;border-radius:40px;font-size:15px;font-weight:500;line-height:1.2;font-family:inherit;border:1px solid var(--accent);cursor:pointer;transition:opacity .2s,background .2s}
+.btn:hover{opacity:.9}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);opacity:1}
+.btn.inv{background:var(--on);color:var(--accent);border-color:var(--on)}
+.btn.inv-line{background:transparent;color:var(--on);border-color:currentColor}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.art{aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:linear-gradient(160deg,var(--accent2),var(--accent));display:grid;place-items:center;font-size:96px}
-section{padding:70px 0}
-.head{text-align:center;margin-bottom:36px}
-.head h2{font-size:clamp(28px,4vw,40px);margin-top:8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
-.card h3{font-size:24px;margin-bottom:10px}
-.row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:15px}
+
+/* hero */
+.hero{background:var(--soft);padding:80px 0 88px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{margin:0 0 20px}
+.hero p.lead{color:var(--muted);max-width:30em;margin-bottom:30px;font-size:1.06rem}
+.qb{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 24px 48px -32px rgba(60,20,40,.35)}
+.qb h2{font-size:1.6rem;margin-bottom:4px}
+.qb .fine{margin-bottom:18px}
+.qb form{display:grid;gap:14px;max-width:none;margin:0}
+.fine{font-size:14px;color:var(--muted)}
+
+/* section heads */
+.head{max-width:620px;margin-bottom:40px}
+.head p{color:var(--muted);margin-top:10px}
+.pagehead{background:var(--soft);padding:60px 0 52px;border-bottom:1px solid var(--line)}
+.pagehead p{color:var(--muted);margin-top:12px;max-width:34em}
+
+/* service tiles (home) */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tile{display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;transition:border-color .2s}
+.tile:hover{border-color:var(--accent)}
+.tile p{color:var(--muted);font-size:15px;flex:1}
+.tile .from{font-weight:500;color:var(--accent);font-size:15px;margin-top:6px}
+.ic{width:46px;height:46px;border-radius:50%;background:var(--soft);display:grid;place-items:center;margin-bottom:6px}
+.ic svg{width:22px;height:22px;fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* reasons */
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.why div{border-top:2px solid var(--gold);padding-top:20px}
+.why h3{margin-bottom:8px}
+.why p{color:var(--muted)}
+
+/* testimonials */
+.tst{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px}
+.quote{font-size:1.3rem;font-weight:500;line-height:1.5}
+.quote small{display:block;font-family:'Jost','Hind Siliguri',sans-serif;font-size:14px;font-weight:400;color:var(--muted);margin-top:14px}
+
+/* CTA band */
+.band{background:var(--accent);color:var(--on);padding:56px 0}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px 40px;flex-wrap:wrap}
+.band h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:6px}
+.band p{opacity:.9}
+
+/* services page */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.svc .card{display:flex;flex-direction:column;padding:32px}
+.svc .top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.svc .top .ic{margin:0}
+.row{display:flex;align-items:baseline;gap:10px;padding:11px 0}
+.row i{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
 .row b{font-weight:500;color:var(--accent);white-space:nowrap}
-.about{background:var(--surface);border-block:1px solid var(--line)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:center;margin-top:30px}
-.stats b{display:block;font-size:40px;color:var(--accent)}
-.quote{font-size:20px;font-weight:500}
-.quote small{display:block;font-family:'Jost','Hind Siliguri',sans-serif;font-size:13px;color:var(--muted);margin-top:10px}
-form{display:grid;gap:12px;max-width:520px;margin:0 auto}
-input,select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit;font-size:16px;min-height:46px}
-#ok{display:none;text-align:center;color:var(--accent);font-weight:500}
-footer{padding:30px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-#top2{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s;z-index:6}
-#top2.show{opacity:1;pointer-events:auto;transform:none}
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-nav .links a.act{color:var(--accent);font-weight:500}
-@media(max-width:900px){.hero{padding:60px 0}}
-@media(max-width:720px){
-.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin-inline:auto}.cta{justify-content:center}
-.art{max-width:240px;margin:auto;order:-1;font-size:72px}
-.hero{padding:44px 0}section{padding:48px 0}
-.menu{display:block}.nbtn{display:none}.ctl{margin-left:auto}
-nav .links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 20px 12px}
-nav.open .links{display:flex}
-nav .links a{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}
-nav .links a:last-child{border-bottom:0}}
-@media(max-width:480px){.wrap{padding:0 16px}.stats b{font-size:32px}.cta .btn{width:100%;text-align:center}.card{padding:20px}.logo{font-size:21px}}
-@media(min-width:1400px){html{font-size:18px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}#top2{transition:none}}
+.svc .btn{margin-top:auto;align-self:flex-start}
+.svc .rows{margin-bottom:22px}
+.note{margin-top:28px}
+
+/* about */
+.story{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+.story p{color:var(--muted);font-size:1.06rem}
+.stats{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.stats div{display:flex;align-items:baseline;gap:16px;padding:20px 26px;border-bottom:1px solid var(--line)}
+.stats div:last-child{border-bottom:0}
+.stats b{font-size:2.6rem;line-height:1;color:var(--accent);min-width:4.2ch}
+.stats span{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.steps li{list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--on);font-weight:500;margin-bottom:14px}
+.steps{margin:0;padding:0}
+.steps h3{margin-bottom:6px}
+.steps p{color:var(--muted)}
+
+/* booking */
+.bgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+.formcard{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:32px}
+form{display:grid;gap:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:6px;min-width:0}
+label{font-size:14px;font-weight:500}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:16px;min-height:48px}
+textarea{min-height:92px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+[aria-invalid="true"]{border-color:var(--err)}
+.err{color:var(--err);font-size:13px;min-height:0}
+.err:empty{display:none}
+#ok{padding:16px 18px;border-radius:10px;background:var(--soft);border:1px solid var(--line);font-weight:500}
+#ok[hidden]{display:none}
+.info{display:grid;gap:22px}
+.info dt{font-size:14px;color:var(--muted)}
+.info dd{margin:2px 0 0;font-weight:500}
+.info a{color:var(--accent)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;padding:16px 0;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1.4}
+details[open] summary::after{content:"\2212"}
+details p{padding:0 0 16px;color:var(--muted)}
+.faq{margin-top:36px}
+
+/* footer */
+footer{background:var(--surface);border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:40px;padding-top:56px;padding-bottom:40px}
+footer h4{color:var(--ink)}
+footer .logo{color:var(--ink);display:inline-block;margin-bottom:10px}
+footer a:hover{color:var(--accent)}
+footer .fl{display:grid;gap:6px}
+footer .fc{display:grid;gap:6px}
+.fbar{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;padding-top:18px;padding-bottom:22px;border-top:1px solid var(--line);font-size:14px}
+.credit a{color:var(--accent);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+
+/* mobile action bar */
+.mbar{display:none}
+
+/* toggles */
 .seg,.tgl{position:relative;display:inline-flex;align-items:center;height:44px;padding:4px;border:1px solid var(--line);border-radius:40px;background:var(--surface);cursor:pointer;font:inherit;font-size:13px;font-weight:500;-webkit-tap-highlight-color:transparent}
-.seg:focus-visible,.tgl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .thumb{position:absolute;top:4px;left:4px;height:34px;border-radius:30px;background:var(--ink);transition:transform .3s cubic-bezier(.4,0,.2,1)}
 .seg .thumb{width:38px}.tgl .thumb{width:34px}
 .seg .o{position:relative;z-index:1;width:38px;text-align:center;line-height:34px;color:var(--muted);transition:color .25s}
@@ -80,65 +186,178 @@ nav .links a:last-child{border-bottom:0}}
 .tgl .sun{color:var(--bg)}.tgl .moon{color:var(--muted)}
 .tgl[aria-pressed="true"] .sun{color:var(--muted)}.tgl[aria-pressed="true"] .moon{color:var(--bg)}
 .tgl[aria-pressed="true"] .thumb{transform:translateX(34px)}
-@media(prefers-reduced-motion:reduce){.thumb,.seg .o,.tgl svg{transition:none}}
-.credit{display:inline-block;margin-top:14px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:14px}
-.credit a{font-weight:500;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
-.credit a::after{content:" \2197";display:inline-block;text-decoration:none}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 20px}
-.credit{margin-top:0}
-@media(max-width:640px){footer .wrap{flex-direction:column;justify-content:center;text-align:center}}
+
+@media(max-width:960px){
+.hero .wrap,.story,.bgrid{grid-template-columns:1fr}
+.hero{padding:56px 0 64px}
+.tiles{grid-template-columns:repeat(2,1fr)}
+.fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:720px){
+section{padding:56px 0}
+.topbar{display:none}
+.menu{display:block}.nbtn{display:none}.ctl{margin-left:auto}
+nav .wrap{height:60px}
+nav .links{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px 24px 12px}
+nav.open .links{display:flex}
+nav .links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+nav .links a.act{border-bottom-color:var(--line);color:var(--accent)}
+nav .links a:last-child{border-bottom:0}
+.tiles,.why,.tst,.svc,.steps{grid-template-columns:1fr}
+.why{gap:28px}
+.two{grid-template-columns:1fr}
+.formcard{padding:24px}
+.band .btn,.hero .cta .btn{flex:1}
+.fgrid{grid-template-columns:1fr}
+body{padding-bottom:74px}
+body[data-page="book.html"]{padding-bottom:0}
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:9;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px;background:var(--bg);border-top:1px solid var(--line)}
+body[data-page="book.html"] .mbar{display:none}
+}
+@media(max-width:480px){.wrap{padding:0 18px}.logo{font-size:23px}.qb{padding:22px}}
+@media(min-width:1400px){html{font-size:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+#top2{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--on);cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s;z-index:8;box-shadow:0 8px 20px -8px rgba(60,20,40,.5)}
+#top2.show{opacity:1;pointer-events:auto;transform:none}
+#top2 svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:720px){#top2{bottom:calc(84px + env(safe-area-inset-bottom,0px))}body[data-page="book.html"] #top2{bottom:max(20px,env(safe-area-inset-bottom,0px))}}
 </style>
 </head>
 <body data-page="services.html">
-<nav id="nv"><div class="wrap"><a href="index.html" class="logo">Lumi&egrave;re<span>.</span></a>
-<div class="links"><a href="index.html" data-i="n0">হোম</a><a href="services.html" data-i="n1">সেবা</a><a href="about.html" data-i="n2">পরিচিতি</a><a href="book.html" data-i="n4">বুকিং</a></div>
-<div class="ctl"><button class="seg" id="lang" type="button" aria-label="Switch to English" title="Language"><span class="thumb"></span><span class="o o-bn">বাং</span><span class="o o-en">EN</span></button><button class="tgl" id="theme" type="button" aria-pressed="false" aria-label="Dark mode" title="Theme"><span class="thumb"></span><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button><a href="book.html" class="btn nbtn" data-i="nb">বুক করুন</a><button class="ib menu" id="m" aria-label="Menu" aria-expanded="false">☰</button></div></div></nav>
-<section ><div class="wrap">
-<div class="head"><div class="eyebrow" data-i="s0">আমাদের সেবা</div><h2 data-i="s1">সেবাসমূহ</h2></div>
-<div class="grid">
-<div class="card"><h3 data-i="c1">চুল</h3>
-<div class="row"><span data-i="a1">হেয়ারকাট ও স্টাইলিং</span><b>৳ 600</b></div><div class="row"><span data-i="a2">হেয়ার কালার</span><b>৳ 3,500</b></div><div class="row"><span data-i="a3">কেরাটিন ট্রিটমেন্ট</span><b>৳ 6,000</b></div></div>
-<div class="card"><h3 data-i="c2">ত্বক</h3>
-<div class="row"><span data-i="b1">ক্লাসিক ফেসিয়াল</span><b>৳ 1,500</b></div><div class="row"><span data-i="b2">হাইড্রা গ্লো ফেসিয়াল</span><b>৳ 3,000</b></div><div class="row"><span data-i="b3">ক্লিন-আপ</span><b>৳ 900</b></div></div>
-<div class="card"><h3 data-i="c3">মেকআপ</h3>
-<div class="row"><span data-i="d1">পার্টি মেকআপ</span><b>৳ 3,500</b></div><div class="row"><span data-i="d2">এনগেজমেন্ট লুক</span><b>৳ 7,000</b></div><div class="row"><span data-i="d3">ব্রাইডাল প্যাকেজ</span><b>৳ 15,000</b></div></div>
-<div class="card"><h3 data-i="c4">নখ ও স্পা</h3>
-<div class="row"><span data-i="e1">ম্যানিকিউর</span><b>৳ 700</b></div><div class="row"><span data-i="e2">পেডিকিউর</span><b>৳ 900</b></div><div class="row"><span data-i="e3">রিল্যাক্সিং ম্যাসাজ</span><b>৳ 2,500</b></div></div>
-</div></div></section>
-<footer><div class="wrap"><span data-i="ft">লুমিয়ের সেলুন ও স্পা · প্রতিদিন সকাল ১০টা – রাত ৯টা</span><span class="credit">Designed &amp; Maintained by <a href="https://optiqoweb.github.io/optiqoweb/" target="_blank" rel="noopener">Optiqo Web</a></span></div></footer>
-<button id="top2" aria-label="Back to top">↑</button>
+<a class="skip" href="#main" data-i="skip">মূল অংশে যান</a>
+<div class="topbar"><div class="wrap"><span data-i="tb1">প্রতিদিন সকাল ১০টা – রাত ৯টা</span><a href="tel:+8801935128454">01935-128454</a></div></div>
+<nav id="nv"><div class="wrap"><a href="index.html" class="logo" aria-label="Lumière">Lumi&egrave;re<span>.</span></a>
+<div class="links"><a href="index.html" data-i="n0">হোম</a><a href="services.html" data-i="n1" class="act" aria-current="page">সেবা</a><a href="about.html" data-i="n2">পরিচিতি</a></div>
+<div class="ctl"><button class="seg" id="lang" type="button" aria-label="Switch to English" title="Language"><span class="thumb"></span><span class="o o-bn">বাং</span><span class="o o-en">EN</span></button><button class="tgl" id="theme" type="button" aria-pressed="false" aria-label="Dark mode" title="Theme"><span class="thumb"></span><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button><a href="book.html" class="btn nbtn" data-i="nb">বুক করুন</a><button class="ib menu" id="m" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></div></nav>
+<main id="main">
+<header class="pagehead"><div class="wrap"><h1 data-i="s1">সেবাসমূহ</h1><p data-i="sl">চুল থেকে ব্রাইডাল, সবকিছু এক জায়গায়।</p></div></header>
+<section><div class="wrap"><div class="svc"><div class="card" id="hair"><div class="top"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></span><h3 data-i="c1">চুল</h3></div><div class="rows"><div class="row"><span data-i="a1">হেয়ারকাট ও স্টাইলিং</span><i></i><b>৳ 600</b></div><div class="row"><span data-i="a2">হেয়ার কালার</span><i></i><b>৳ 3,500</b></div><div class="row"><span data-i="a3">কেরাটিন ট্রিটমেন্ট</span><i></i><b>৳ 6,000</b></div></div><a class="btn ghost" href="book.html?s=hair" data-i="bk">এই সেবা বুক করুন</a></div><div class="card" id="skin"><div class="top"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3 data-i="c2">ত্বক</h3></div><div class="rows"><div class="row"><span data-i="b1">ক্লাসিক ফেসিয়াল</span><i></i><b>৳ 1,500</b></div><div class="row"><span data-i="b2">হাইড্রা গ্লো ফেসিয়াল</span><i></i><b>৳ 3,000</b></div><div class="row"><span data-i="b3">ক্লিন-আপ</span><i></i><b>৳ 900</b></div></div><a class="btn ghost" href="book.html?s=skin" data-i="bk">এই সেবা বুক করুন</a></div><div class="card" id="makeup"><div class="top"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17v4M17 19h4"/></svg></span><h3 data-i="c3">মেকআপ</h3></div><div class="rows"><div class="row"><span data-i="d1">পার্টি মেকআপ</span><i></i><b>৳ 3,500</b></div><div class="row"><span data-i="d2">এনগেজমেন্ট লুক</span><i></i><b>৳ 7,000</b></div><div class="row"><span data-i="d3">ব্রাইডাল প্যাকেজ</span><i></i><b>৳ 15,000</b></div></div><a class="btn ghost" href="book.html?s=makeup" data-i="bk">এই সেবা বুক করুন</a></div><div class="card" id="spa"><div class="top"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14z"/><path d="M5 19l8-8"/></svg></span><h3 data-i="c4">নখ ও স্পা</h3></div><div class="rows"><div class="row"><span data-i="e1">ম্যানিকিউর</span><i></i><b>৳ 700</b></div><div class="row"><span data-i="e2">পেডিকিউর</span><i></i><b>৳ 900</b></div><div class="row"><span data-i="e3">রিল্যাক্সিং ম্যাসাজ</span><i></i><b>৳ 2,500</b></div></div><a class="btn ghost" href="book.html?s=spa" data-i="bk">এই সেবা বুক করুন</a></div></div><p class="fine note" data-i="pn">সব মূল্য শুরুর দাম। চুলের দৈর্ঘ্য ও ধরন অনুযায়ী বদলাতে পারে।</p></div></section>
+<section class="band"><div class="wrap"><div><h2 data-i="cb1">আপনার পরবর্তী অ্যাপয়েন্টমেন্ট বুক করুন</h2><p data-i="cb2">ফোনে বা হোয়াটসঅ্যাপে — যেভাবে সুবিধা।</p></div>
+<div class="cta"><a href="book.html" class="btn inv" data-i="hb1">অ্যাপয়েন্টমেন্ট নিন</a><a href="tel:+8801935128454" class="btn inv-line" data-i="call">কল করুন</a></div></div></section>
+</main>
+<footer>
+<div class="wrap fgrid">
+<div><div class="logo">Lumi&egrave;re<span>.</span></div><p data-i="fa">চুল, ত্বক, মেকআপ ও ব্রাইডাল সেবার একটি শান্ত, আধুনিক সেলুন।</p></div>
+<div><h4 data-i="fh1">পেজ</h4><div class="fl"><a href="index.html" data-i="n0">হোম</a><a href="services.html" data-i="n1">সেবা</a><a href="about.html" data-i="n2">পরিচিতি</a><a href="book.html" data-i="nb">বুক করুন</a></div></div>
+<div><h4 data-i="fh2">যোগাযোগ</h4><div class="fc"><span data-i="ad">আপনার ঠিকানা, শহর</span><a href="tel:+8801935128454">01935-128454</a><span data-i="tb1">প্রতিদিন সকাল ১০টা – রাত ৯টা</span></div></div>
+</div>
+<div class="wrap fbar"><span>&copy; <span id="yr"></span> <span data-i="cp">লুমিয়ের সেলুন ও স্পা</span></span><span class="credit">Designed &amp; Maintained by <a href="https://optiqoweb.github.io/optiqoweb/" target="_blank" rel="noopener">Optiqo Web</a></span></div>
+</footer>
+<div class="mbar"><a class="btn ghost" href="tel:+8801935128454" data-i="call">কল করুন</a><a class="btn" href="book.html" data-i="nb">বুক করুন</a></div>
+<button id="top2" type="button" aria-label="উপরে যান" title="উপরে যান"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <script>
-var EN={n0:"Home",n1:"Services",n2:"About",n3:"Reviews",n4:"Book",nb:"Book now",h0:"Hair · Skin · Bridal",h1:"Where beauty feels effortless",hp:"A calm, modern salon for hair, skin and makeup. Walk in as you are, leave feeling like the best version of yourself.",hb1:"Book appointment",hb2:"View services",s0:"What we do",s1:"Our services",c1:"Hair",a1:"Haircut & styling",a2:"Hair colour",a3:"Keratin treatment",c2:"Skin",b1:"Classic facial",b2:"Hydra glow facial",b3:"Clean-up",c3:"Makeup",d1:"Party makeup",d2:"Engagement look",d3:"Bridal package",c4:"Nails & Spa",e1:"Manicure",e2:"Pedicure",e3:"Relaxing massage",o0:"Our story",o1:"Care, craft and a little calm",o2:"Our stylists are trained in the latest techniques and use trusted, skin-friendly products. Every visit starts with a conversation, because great results begin with listening.",t1:"Years",t2:"Happy clients",t3:"Expert stylists",r0:"Kind words",r1:"Loved by our clients",q1:"“Best haircut I’ve had in years. Friendly team and a really relaxing space.”",u1:"Nusrat A.",q2:"“They made my wedding day look flawless. Everyone asked who did my makeup!”",u2:"Tasnim R.",q3:"“Clean, professional and worth every taka. My skin has never looked better.”",u3:"Farzana H.",k0:"Reserve your spot",k1:"Book an appointment",p1:"Your name",p2:"Phone number",g1:"Hair",g2:"Skin",g3:"Makeup",g4:"Nails & Spa",k2:"Request booking",k3:"Thank you! We’ll call you shortly to confirm.",ft:"Lumière Salon & Spa · Open daily 10 AM – 9 PM"};
-var els=document.querySelectorAll('[data-i],[data-ph]');
+(function(){
+/* ===== Settings: change these for each client ===== */
+var WHATSAPP_NUMBER='8801935128454'; // country code + number, digits only
+/* ================================================== */
+
+var EN={skip:"Skip to content",tb1:"Open daily, 10 AM – 9 PM",n0:"Home",n1:"Services",n2:"About",nb:"Book now",
+h1:"Where beauty feels effortless",hp:"A calm, modern salon for hair, skin and makeup. Walk in as you are, leave feeling like the best version of yourself.",hb1:"Book appointment",hb2:"View services",
+qh:"Quick booking",qn:"Add your time and contact details in the next step.",ls:"Service",ld:"Date",qb:"Continue booking",
+g1:"Hair",g2:"Skin",g3:"Makeup",g4:"Nails & Spa",
+s0:"What we do",sl:"From everyday hair care to bridal, all in one place.",s1:"Our services",
+d1h:"Cuts, colour and treatments",d2h:"Facials and skin care",d3h:"Party to bridal makeup",d4h:"Manicure, pedicure and massage",fr:"From",
+w0:"Why Lumière",w1t:"We listen first",w1d:"Every visit starts with understanding what you want.",w2t:"Skin-friendly products",w2d:"Trusted products and modern techniques.",w3t:"Clean, comfortable space",w3d:"Relax in a calm, tidy salon.",
+r1:"Loved by our clients",q1:"“Best haircut I’ve had in years. Friendly team and a really relaxing space.”",u1:"Nusrat A.",q2:"“They made my wedding day look flawless. Everyone asked who did my makeup!”",u2:"Tasnim R.",q3:"“Clean, professional and worth every taka. My skin has never looked better.”",u3:"Farzana H.",
+cb1:"Book your next appointment",cb2:"By phone or WhatsApp, whichever suits you.",call:"Call us",
+c1:"Hair",a1:"Haircut & styling",a2:"Hair colour",a3:"Keratin treatment",c2:"Skin",b1:"Classic facial",b2:"Hydra glow facial",b3:"Clean-up",c3:"Makeup",d1:"Party makeup",d2:"Engagement look",d3:"Bridal package",c4:"Nails & Spa",e1:"Manicure",e2:"Pedicure",e3:"Relaxing massage",bk:"Book this",pn:"Prices shown are starting prices and may vary with hair length and type.",
+o0:"Our story",o1:"Care, craft and a little calm",o2:"Our stylists are trained in the latest techniques and use trusted, skin-friendly products. Every visit starts with a conversation, because great results begin with listening.",t1:"Years",t2:"Happy clients",t3:"Expert stylists",
+v0:"What to expect",v1t:"Consultation",v1d:"We talk through your hair, skin and preferences.",v2t:"Treatment",v2d:"Your stylist works with full attention.",v3t:"Aftercare",v3d:"We explain how to care for the result at home.",
+k1:"Book an appointment",kl:"Fill in the form. Your request opens in WhatsApp and we’ll call to confirm.",
+l1:"Name",l2:"Phone number",l3:"Service",l4:"Date",l5:"Time",l6:"Notes (optional)",p1:"Your name",p6:"e.g. preferred stylist or special needs",t0:"Choose a time",
+k2:"Send request on WhatsApp",kn:"Your booking is confirmed once we call or message you.",ok:"Thank you! WhatsApp is opening. Your request reaches us once you send the message.",
+ih:"Contact",ip:"Phone",iw:"WhatsApp",ia:"Address",io:"Hours",iwt:"Message us",
+fq0:"Common questions",fq1:"How is my booking confirmed?",fa1:"After you send the form, we confirm your slot by phone or message.",fq2:"What if I need to change my time?",fa2:"Call or message us and we’ll arrange a new time.",fq3:"Are the prices final?",fa3:"Listed prices are starting prices and may vary with hair length and type.",
+fa:"A calm, modern salon for hair, skin, makeup and bridal services.",fh1:"Pages",fh2:"Visit us",ad:"Your address, City",cp:"Lumière Salon & Spa"};
+
+var T={
+bn:{e1:"নাম লিখুন",e2:"সঠিক মোবাইল নম্বর দিন (যেমন 01712345678)",e4:"আজ বা পরের কোনো তারিখ বেছে নিন",e5:"সময় বেছে নিন",
+ wa:["অ্যাপয়েন্টমেন্টের অনুরোধ","নাম: ","ফোন: ","সেবা: ","তারিখ: ","সময়: ","নোট: "]},
+en:{e1:"Enter your name",e2:"Enter a valid mobile number (e.g. 01712345678)",e4:"Choose today or a later date",e5:"Choose a time",
+ wa:["Appointment request","Name: ","Phone: ","Service: ","Date: ","Time: ","Notes: "]}};
+
+var root=document.documentElement;
+function lang(){return root.lang==='en'?'en':'bn'}
+
+/* language */
+var els=[].slice.call(document.querySelectorAll('[data-i],[data-ph]'));
 els.forEach(function(e){if(e.dataset.i)e._t=e.textContent;if(e.dataset.ph)e._p=e.getAttribute('placeholder')});
 var lb=document.getElementById('lang');
-function setLang(l){document.documentElement.lang=l;
-els.forEach(function(e){if(e.dataset.i)e.textContent=l==='en'?EN[e.dataset.i]:e._t;if(e.dataset.ph)e.setAttribute('placeholder',l==='en'?EN[e.dataset.ph]:e._p)});
-lb.setAttribute('aria-label',l==='en'?'বাংলায় দেখুন':'Switch to English');try{localStorage.setItem('lang',l)}catch(e){}}
-lb.addEventListener('click',function(){setLang(document.documentElement.lang==='en'?'bn':'en')});
-try{if(localStorage.getItem('lang')==='en')setLang('en')}catch(e){}
+function clearErrors(){[].forEach.call(document.querySelectorAll('.err'),function(e){e.textContent=''});
+ [].forEach.call(document.querySelectorAll('[aria-invalid]'),function(e){e.removeAttribute('aria-invalid')})}
+function setLang(l){root.lang=l;
+ els.forEach(function(e){
+  if(e.dataset.i)e.textContent=l==='en'?EN[e.dataset.i]:e._t;
+  if(e.dataset.ph)e.setAttribute('placeholder',l==='en'?(EN[e.dataset.ph]||e._p):e._p)});
+ lb.setAttribute('aria-label',l==='en'?'বাংলায় দেখুন':'Switch to English');
+ clearErrors();
+ try{localStorage.setItem('lang',l)}catch(x){}}
+lb.addEventListener('click',function(){setLang(lang()==='en'?'bn':'en')});
+var sl=null;try{sl=localStorage.getItem('lang')}catch(x){}
+if(sl!=='bn')setLang('en');
 
-var th=document.getElementById('theme'),rt=document.documentElement;
-function isDark(){return rt.dataset.theme==='dark'}
-function icon(){var d=isDark();th.setAttribute('aria-pressed',d);th.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}
-th.addEventListener('click',function(){var n=isDark()?'light':'dark';rt.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(e){}icon()});
-icon();
+/* theme */
+var th=document.getElementById('theme');
+function isDark(){return root.dataset.theme==='dark'}
+function syncTheme(){var d=isDark();th.setAttribute('aria-pressed',d);th.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}
+th.addEventListener('click',function(){var n=isDark()?'light':'dark';root.dataset.theme=n;try{localStorage.setItem('theme',n)}catch(x){}syncTheme()});
+syncTheme();
 
+/* mobile menu */
+var IM='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',IX='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
 var nv=document.getElementById('nv'),mb=document.getElementById('m');
-function closeM(){nv.classList.remove('open');mb.setAttribute('aria-expanded',false);mb.textContent='☰'}
-mb.addEventListener('click',function(){var o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'✕':'☰'});
-nv.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',closeM)});
+function closeM(){nv.classList.remove('open');mb.setAttribute('aria-expanded',false);mb.innerHTML=IM}
+mb.addEventListener('click',function(){var o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.innerHTML=o?IX:IM});
+[].forEach.call(nv.querySelectorAll('.links a'),function(a){a.addEventListener('click',closeM)});
 
-var tp=document.getElementById('top2');
-window.addEventListener('scroll',function(){tp.classList.toggle('show',window.scrollY>500)},{passive:true});
-tp.addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+/* footer year */
+var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
 
-(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.card,.head,.hero .wrap>*,.stats>div').forEach(function(el){el.classList.add('rv');el.style.transitionDelay=(Array.prototype.indexOf.call(el.parentNode.children,el)%4)*90+'ms';io.observe(el)})})();
+/* dates: no past days */
+var d0=new Date(),today=new Date(d0.getTime()-d0.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+[].forEach.call(document.querySelectorAll('input[type=date]'),function(i){i.min=today});
 
-nv.querySelectorAll('.links a').forEach(function(a){if(a.getAttribute('href')===document.body.dataset.page)a.classList.add('act')});
-var fm=document.getElementById('f');if(fm)fm.addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block';this.reset()});
+/* booking form */
+var f=document.getElementById('f');
+if(f){
+ var q=new URLSearchParams(location.search);
+ if(q.get('s')&&f.elements.svc)f.elements.svc.value=q.get('s');
+ if(!f.elements.svc.value)f.elements.svc.selectedIndex=0;
+ if(q.get('d')&&q.get('d')>=today)f.elements.date.value=q.get('d');
+
+ function fail(id,key){var el=f.elements[id],er=document.getElementById('e-'+id);
+  el.setAttribute('aria-invalid','true');er.textContent=T[lang()][key];return el}
+ function pass(id){var el=f.elements[id];el.removeAttribute('aria-invalid');document.getElementById('e-'+id).textContent=''}
+ function digits(s){return s.replace(/[০-৯]/g,function(d){return '০১২৩৪৫৬৭৮৯'.indexOf(d)}).replace(/[\s\-]/g,'')}
+
+ f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var first=null,name=f.elements.name.value.trim(),phone=digits(f.elements.phone.value);
+  document.getElementById('ok').hidden=true;
+  ['name','phone','date','time'].forEach(pass);
+  if(!name)first=first||fail('name','e1');
+  if(!/^(?:\+?88)?01[3-9]\d{8}$/.test(phone))first=first||fail('phone','e2');
+  if(!f.elements.date.value||f.elements.date.value<today)first=first||fail('date','e4');
+  if(!f.elements.time.value)first=first||fail('time','e5');
+  if(first){first.focus();return}
+  var L=T[lang()].wa,svc=f.elements.svc.options[f.elements.svc.selectedIndex].text,note=f.elements.note.value.trim();
+  var lines=[L[0],L[1]+name,L[2]+phone,L[3]+svc,L[4]+f.elements.date.value,L[5]+f.elements.time.value];
+  if(note)lines.push(L[6]+note);
+  var url='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(lines.join('\n'));
+  var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  var ok=document.getElementById('ok');ok.hidden=false;ok.scrollIntoView({block:'nearest'});
+  f.reset();
+ });
+}
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('top2'),r=document.documentElement;
+function lab(){var t=r.lang==='en'?'Back to top':'উপরে যান';b.setAttribute('aria-label',t);b.title=t}
+lab();new MutationObserver(lab).observe(r,{attributes:true,attributeFilter:['lang']});
+window.addEventListener('scroll',function(){b.classList.toggle('show',window.scrollY>500)},{passive:true});
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});
+})();
 </script>
 </body>
 </html>
